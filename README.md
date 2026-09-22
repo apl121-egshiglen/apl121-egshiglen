@@ -14,3 +14,18 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+# APL121 - Egshiglen
+
+## Repository-ийн тухай
+
+Энэ repository нь APL121 хичээлийн даалгавар болон C хэл дээрх програмуудыг агуулна.
+
+## Ажиллуулах заавар
+
+Програмыг хөрвүүлэх:
+
+gcc hello.c -o hello
+
+Програмыг ажиллуулах:
+
+./hello

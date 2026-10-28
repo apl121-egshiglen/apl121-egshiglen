@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="biy daalt"/>
+        <attribute name="authors" value="egshi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-28 11:17:19 PM"/>
+        <attribute name="created" value="ZWdzaGk7RUdTSElTLU1BQ0JPT0stOzIwMjYtMTAtMjg7MDU6NTQ6MTIgUE07Mjg1OQ=="/>
+        <attribute name="edited" value="ZWdzaGk7RUdTSElTLU1BQ0JPT0stOzIwMjYtMTAtMjg7MTE6MTc6MTkgUE07MzsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="guests, buuzPerPerson, totalBuuz, dayBuuz, i, temp" type="Integer" array="False" size=""/>
+            <declare name="flourKg, meatKg, prepTimeMin" type="Real" array="False" size=""/>
+            <declare name="familyBuuz1, familyBuuz2, familyBuuz3" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#1062;&#1072;&#1075;&#1072;&#1072;&#1085; &#1089;&#1072;&#1088;&#1099;&#1085; &#1073;&#1091;&#1091;&#1079; &#1090;&#1086;&#1086;&#1094;&#1086;&#1086;&#1083;&#1091;&#1091;&#1088;=&quot;" newline="True"/>
+            <output expression="&quot;&#1047;&#1086;&#1095;&#1076;&#1099;&#1085; &#1090;&#1086;&#1086;&#1075; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091; (&#1101;&#1077;&#1088;&#1101;&#1075; &#1090;&#1086;&#1086;): &quot;" newline="True"/>
+            <input variable="guests"/>
+            <while expression="guests &lt;= 0">
+                <output expression="&quot;&#1041;&#1091;&#1088;&#1091;&#1091; &#1086;&#1088;&#1086;&#1083;&#1090;! &#1058;&#1072; &#1079;&#1072;&#1072;&#1074;&#1072;&#1083; &#1101;&#1077;&#1088;&#1101;&#1075; &#1090;&#1086;&#1086; &#1086;&#1088;&#1091;&#1091;&#1083;&#1072;&#1093; &#1105;&#1089;&#1090;&#1086;&#1081;.&quot;" newline="True"/>
+            </while>
+            <input variable="guests"/>
+            <if expression="guests &lt;= 0">
+                <then>
+                    <output expression="&quot;&#1041;&#1091;&#1088;&#1091;&#1091; &#1086;&#1088;&#1086;&#1083;&#1090;! &#1058;&#1072; &#1079;&#1072;&#1072;&#1074;&#1072;&#1083; &#1101;&#1077;&#1088;&#1101;&#1075; &#1090;&#1086;&#1086; &#1086;&#1088;&#1091;&#1091;&#1083;&#1072;&#1093; &#1105;&#1089;&#1090;&#1086;&#1081;.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <while expression="buuzPerPerson &lt; 1 OR buuzPerPerson &gt; 100">
+                <output expression="&quot;&#1041;&#1091;&#1088;&#1091;&#1091; &#1086;&#1088;&#1086;&#1083;&#1090;! 1-&#1101;&#1101;&#1089; 100-&#1080;&#1081;&#1085; &#1093;&#1086;&#1086;&#1088;&#1086;&#1085;&#1076; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;.&quot;" newline="True"/>
+            </while>
+            <output expression="&quot;&#1053;&#1101;&#1075; &#1093;&#1199;&#1085;&#1076; &#1085;&#1086;&#1075;&#1076;&#1086;&#1093; &#1073;&#1091;&#1091;&#1079;&#1085;&#1099; &#1090;&#1086;&#1086;&#1075; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091; (1-100): &quot;" newline="True"/>
+            <input variable="buuzPerPerson"/>
+            <if expression="buuzPerPerson &lt; 1 OR buuzPerPerson &gt; 100">
+                <then>
+                    <output expression="&quot;&#1041;&#1091;&#1088;&#1091;&#1091; &#1086;&#1088;&#1086;&#1083;&#1090;! 1-&#1101;&#1101;&#1089; 100-&#1080;&#1081;&#1085; &#1093;&#1086;&#1086;&#1088;&#1086;&#1085;&#1076; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="totalBuuz" expression="guests * buuzPerPerson"/>
+            <assign variable="flourKg" expression="(totalBuuz * 20) / 1000"/>
+            <assign variable="meatKg" expression="(totalBuuz * 25) / 1000"/>
+            <assign variable="prepTimeMin" expression="totalBuuz * 0.5"/>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;--- &#1045;&#1088;&#1257;&#1085;&#1093;&#1080;&#1081; &#1090;&#1086;&#1086;&#1094;&#1086;&#1086;&#1083;&#1091;&#1091;&#1088; ---&quot;" newline="True"/>
+            <output expression="&quot;&#1053;&#1080;&#1081;&#1090; &#1096;&#1072;&#1072;&#1088;&#1076;&#1083;&#1072;&#1075;&#1072;&#1090;&#1072;&#1081; &#1073;&#1091;&#1091;&#1079;: &quot; &amp; totalBuuz &amp; &quot; &#1096;&#1080;&#1088;&#1093;&#1101;&#1075;&quot;" newline="True"/>
+            <output expression="&quot;&#1061;&#1101;&#1088;&#1101;&#1075;&#1094;&#1101;&#1101;&#1090; &#1075;&#1091;&#1088;&#1080;&#1083;: &quot; &amp; flourKg &amp; &quot; &#1082;&#1075;&quot;" newline="True"/>
+            <output expression="&quot;&#1061;&#1101;&#1088;&#1101;&#1075;&#1094;&#1101;&#1101;&#1090; &#1084;&#1072;&#1093;: &quot; &amp; meatKg &amp; &quot; &#1082;&#1075;&quot;" newline="True"/>
+            <output expression="&quot;&#1041;&#1101;&#1083;&#1090;&#1075;&#1101;&#1093; &#1085;&#1080;&#1081;&#1090; &#1093;&#1091;&#1075;&#1072;&#1094;&#1072;&#1072;: &quot; &amp; prepTimeMin &amp; &quot; &#1084;&#1080;&#1085;&#1091;&#1090;&quot;" newline="True"/>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;--- &#1064;&#1080;&#1085;&#1080;&#1081;&#1085; 1-&#1085;&#1101;&#1101;&#1089; 5-&#1085;&#1099; &#1257;&#1076;&#1088;&#1080;&#1081;&#1085; &#1093;&#1101;&#1088;&#1101;&#1075;&#1083;&#1101;&#1101;&#1085;&#1080;&#1081; &#1090;&#1072;&#1072;&#1084;&#1072;&#1075;&#1083;&#1072;&#1083; ---&quot;" newline="True"/>
+            <output expression="&quot;&#1256;&#1076;&#1257;&#1088;         &#1041;&#1091;&#1091;&#1079;&#1085;&#1099; &#1090;&#1086;&#1086;&quot;" newline="True"/>
+            <output expression="&quot;----------------------------------------&quot;" newline="True"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1"/>
+            <if expression="i == 1">
+                <then>
+                    <assign variable="dayBuuz" expression="totalBuuz * 0.40"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="i == 2">
+                <then>
+                    <assign variable="dayBuuz" expression="totalBuuz * 0.25"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="i == 3">
+                <then>
+                    <assign variable="dayBuuz" expression="totalBuuz * 0.15"/>
+                </then>
+                <else>
+                    <assign variable="dayBuuz" expression="totalBuuz * 0.10"/>
+                </else>
+            </if>
+            <output expression="&quot;&#1256;&#1076;&#1257;&#1088; &quot; &amp; i &amp; &quot;       &quot; &amp; dayBuuz" newline="True"/>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;--- 3 &#1072;&#1081;&#1083;&#1099;&#1085; &#1073;&#1091;&#1091;&#1079;&#1085;&#1099; &#1090;&#1086;&#1086;&#1075; &#1093;&#1072;&#1088;&#1100;&#1094;&#1091;&#1091;&#1083;&#1078; &#1101;&#1088;&#1101;&#1084;&#1073;&#1101;&#1083;&#1101;&#1093; ---&quot;" newline="True"/>
+            <while expression="familyBuuz1 &lt; 0"/>
+            <output expression="&quot;1-&#1088; &#1072;&#1081;&#1083;&#1099;&#1085; &#1073;&#1091;&#1091;&#1079;&#1085;&#1099; &#1090;&#1086;&#1086;&#1075; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;: &quot;" newline="True"/>
+            <input variable="familyBuuz1"/>
+            <if expression="familyBuuz1 &lt; 0">
+                <then>
+                    <output expression="&quot;&#1041;&#1091;&#1088;&#1091;&#1091; &#1086;&#1088;&#1086;&#1083;&#1090;! &#1057;&#1257;&#1088;&#1257;&#1075; &#1073;&#1080;&#1096; &#1090;&#1086;&#1086; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072;&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <while expression="familyBuuz2 &lt; 0"/>
+            <output expression="&quot;2-&#1088; &#1072;&#1081;&#1083;&#1099;&#1085; &#1073;&#1091;&#1091;&#1079;&#1085;&#1099; &#1090;&#1086;&#1086;&#1075; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;: &quot;" newline="True"/>
+            <input variable="familyBuuz2"/>
+            <if expression="familyBuuz2 &lt; 0">
+                <then>
+                    <output expression="&quot;&#1041;&#1091;&#1088;&#1091;&#1091; &#1086;&#1088;&#1086;&#1083;&#1090;! &#1057;&#1257;&#1088;&#1257;&#1075; &#1073;&#1080;&#1096; &#1090;&#1086;&#1086; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <while expression="familyBuuz3 &lt; 0"/>
+            <output expression="&quot;3-&#1088; &#1072;&#1081;&#1083;&#1099;&#1085; &#1073;&#1091;&#1091;&#1079;&#1085;&#1099; &#1090;&#1086;&#1086;&#1075; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;: &quot;" newline="True"/>
+            <input variable="familyBuuz3"/>
+            <if expression="familyBuuz3 &lt; 0">
+                <then>
+                    <output expression="&quot;&#1041;&#1091;&#1088;&#1091;&#1091; &#1086;&#1088;&#1086;&#1083;&#1090;! &#1057;&#1257;&#1088;&#1257;&#1075; &#1073;&#1080;&#1096; &#1090;&#1086;&#1086; &#1086;&#1088;&#1091;&#1091;&#1083;&#1085;&#1072; &#1091;&#1091;.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="familyBuuz1 &lt; familyBuuz2">
+                <then>
+                    <assign variable="temp" expression="familyBuuz1"/>
+                    <assign variable="familyBuuz1" expression="familyBuuz2"/>
+                    <assign variable="familyBuuz2" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="familyBuuz1 &lt; familyBuuz3">
+                <then>
+                    <assign variable="temp" expression="familyBuuz1"/>
+                    <assign variable="familyBuuz1" expression="familyBuuz3"/>
+                    <assign variable="familyBuuz3" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="familyBuuz2 &lt; familyBuuz3">
+                <then>
+                    <assign variable="temp" expression="familyBuuz2"/>
+                    <assign variable="familyBuuz2" expression="familyBuuz3"/>
+                    <assign variable="familyBuuz3" expression="temp"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;&#1040;&#1081;&#1083;&#1091;&#1091;&#1076;&#1099;&#1085; &#1073;&#1091;&#1091;&#1079;&#1085;&#1099; &#1090;&#1086;&#1086;&#1085;&#1099; &#1101;&#1088;&#1101;&#1084;&#1073;&#1101; (&#1048;&#1093;&#1101;&#1101;&#1089; &#1073;&#1072;&#1075;&#1072; &#1088;&#1091;&#1091;):&quot;" newline="True"/>
+            <output expression="&quot;1. &#1061;&#1072;&#1084;&#1075;&#1080;&#1081;&#1085; &#1080;&#1093;: &quot; &amp; familyBuuz1 &amp; &quot; &#1096;&#1080;&#1088;&#1093;&#1101;&#1075;&quot;" newline="True"/>
+            <output expression="&quot;2. &#1044;&#1091;&#1085;&#1076;: &quot; &amp; familyBuuz2 &amp; &quot; &#1096;&#1080;&#1088;&#1093;&#1101;&#1075;&quot;" newline="True"/>
+            <output expression="&quot;3. &#1061;&#1072;&#1084;&#1075;&#1080;&#1081;&#1085; &#1073;&#1072;&#1075;&#1072;: &quot; &amp; familyBuuz3 &amp; &quot; &#1096;&#1080;&#1088;&#1093;&#1101;&#1075;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
